@@ -1,0 +1,260 @@
+
+.loginContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    font-family: "inter", system-ui, sans-serif;
+}
+
+.loginLeft{
+   background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.loginBox *,
+.loginBox *::before,
+.loginBox *::after{
+    box-sizing: border-box;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: -25px;
+    margin-left: -35px;
+
+}
+
+.logoImg{
+    width: 100px;
+    height: 100px;
+     background-color: #f9fafb;
+     mix-blend-mode: multiply;
+}
+
+.logoText{
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827; 
+    line-height: 1;
+    margin-left: -20px;
+    margin-top: -6px;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #111827;
+    margin-top: 0;
+}
+.subtitle{
+    font-size: 15px;
+    color: #6b7280;
+   margin-top: -1px;
+}
+.error{
+    font-size: 14px;
+    color: #dc2626;
+}
+
+.inputField:first-of-type{
+    margin-top: 24px;
+}
+.inputField{
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5bd;
+    margin-bottom: 16px;
+    outline: none;
+}
+.inputField:focus{
+    border-color: #0b1f3a;
+}
+.forgot{
+    text-decoration: none;
+    font-size: 13px;
+    color: #111827;
+    margin-bottom: 22px;
+}
+.forgot:hover{
+    text-decoration: underline;
+}
+
+.signIn{
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0b1f3a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    max-width: 100%;
+}
+.signIn:hover{
+    opacity: 0.92;
+}
+.signIn:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 28px 0;
+}
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #d1d5db;
+}
+.divider::before{
+    margin-right: 12px;
+}
+.divider::after{
+    margin-left: 12px;
+}
+
+.divider span{
+    font-size: 13px;
+    color: #6b7280;
+   white-space: nowrap;
+}
+.socials{
+    display: flex;
+    gap: 12px;
+}
+.socialButton{
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5bd;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.socialButton:hover{
+    background-color: #f3f4f6;
+}
+
+.socialIcon{
+    font-size: 19px;
+    font-weight: bolder;
+
+     border: none;
+     padding: 3px 3px;
+     width: 20px;
+     height: 20px;
+     background-color: #d1d5bd;
+   
+    
+}
+.google{
+    color: #4b7b5bfa;
+}
+.facebook{
+    color: #111827;
+}
+
+.loginRight{
+    background-color: #0b1f3a;
+    color: #ffffff;
+
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    
+
+    text-align: center;
+    align-items: center;
+}
+.rightTitle{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: left;
+}
+.processWord{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 38px;
+    font-weight: 700;
+}
+.rightText{
+    font-size: 18px;
+    color: #c7d2fe;
+    max-width: 420px;
+    line-height: 1.6;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (max-width:768px){
+    .loginContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+        min-height: 100vh;
+    }
+    .loginLeft,
+    .loginRight{
+        justify-content: center;
+        align-items: center;
+        padding: 40px 24px;
+    }
+    .loginBox{
+        width: 100%;
+        max-width: 420px;
+    }
+    .loginRight{
+        padding-top: 32px;
+    }
+    .rightTitle{
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    .rightText{
+        font-size: 16px;
+        max-width: 360px;
+    }
+    .logo{
+        justify-content: center;
+        margin-left: 0;
+    }
+    .socials{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .socialButton{
+        width: 100%;
+    }
+  
+    
+}
