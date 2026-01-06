@@ -25,7 +25,7 @@ import{faGoogle, faFacebookF} from "@fortawesome/free-brands-svg-icons"
       e.preventDefault();
 
       if(!formData.email || !formData.password){
-        setError("All feilds are required");
+        setError("All fields are required");
         return;
       }
       
@@ -52,8 +52,13 @@ import{faGoogle, faFacebookF} from "@fortawesome/free-brands-svg-icons"
 
               <h2 className={styles.title}> Secure Login </h2>
               <p className={styles.subtitle}>Welcome back! Please enter your details.</p>
-              {error && <p className={styles.error}>{error}</p>}
-
+             
+             {error && (
+              <div className={styles.errorBox}>
+                <span className={styles.errorText}>{error}</span>
+              </div>
+             )}
+               
               <input 
               type='email'
               name='email'
