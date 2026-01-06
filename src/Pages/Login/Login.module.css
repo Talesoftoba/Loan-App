@@ -17,16 +17,14 @@ body
 .loginContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    min-height: 0;
      width: 100vw;
     font-family: "inter", system-ui, sans-serif;
     overflow: hidden;
     position: relative;
+    height: calc(var(--vh, 1vh) * 100);
 }
-.loginContainer > *:last-child{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+
 
 .loginLeft{
    background-color:  #fff;
