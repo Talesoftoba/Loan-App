@@ -243,16 +243,15 @@ body
         grid-template-rows: auto 1fr;
        
         height: auto;
-        min-height: 100%;
+        min-height: auto;
         
     }
     .loginLeft{
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 18px;
-        padding-bottom: 24px;
-      
+       padding-bottom: 0;
+       margin-bottom: 0;
     }
     .loginBox{
         transform: translateY(-8px);
@@ -270,8 +269,8 @@ body
        align-items: center;
        padding: 48px 24px;
        text-align: center;
-    
-     
+      background-color: #0b1f3a;
+       align-self: stretch;
     }
     .rightTitle{
         font-size: 28px;
