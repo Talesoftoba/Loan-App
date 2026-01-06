@@ -22,7 +22,10 @@ body
     font-family: "inter", system-ui, sans-serif;
     overflow: hidden;
     position: relative;
-   
+}
+.loginContainer > *:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .loginLeft{
