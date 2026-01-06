@@ -17,12 +17,12 @@ body
 .loginContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    min-height: 100svh;
      width: 100vw;
     font-family: "inter", system-ui, sans-serif;
     overflow: hidden;
     position: relative;
-    --mobile-right-height: 200px;
+   
 }
 
 .loginLeft{
@@ -252,7 +252,7 @@ body
         align-items: flex-start;
         padding-top: 18px;
         padding-bottom: 24px;
-        padding-bottom: var(--mobile-right-height);
+      
     }
     .loginBox{
         transform: translateY(-8px);
@@ -260,17 +260,17 @@ body
     }
     .loginRight{
        padding: 24px;
-       position: fixed;
-       bottom: 0;
+       position: static;
+        bottom: 0;
        left: 0;
        right: 0;
        height: 185px;
        display: flex;
        justify-content: center;
        align-items: center;
-       
-       height: var(--mobile-right-height);
-      padding: 20px 24px;
+       padding: 48px 24px;
+       text-align: center;
+       padding-bottom: 32px;
      
     }
     .rightTitle{
