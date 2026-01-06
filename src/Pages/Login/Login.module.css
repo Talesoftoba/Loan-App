@@ -21,8 +21,8 @@ body
      width: 100vw;
     font-family: "inter", system-ui, sans-serif;
     overflow: hidden;
-
     position: relative;
+    --mobile-right-height: 140px;
 }
 
 .loginLeft{
@@ -252,6 +252,7 @@ body
         align-items: flex-start;
         padding-top: 18px;
         padding-bottom: 24px;
+        padding-bottom: var(--mobile-right-height);
     }
     .loginBox{
         transform: translateY(-8px);
@@ -267,7 +268,10 @@ body
        display: flex;
        justify-content: center;
        align-items: center;
-       z-index: 1;
+       
+       height: var(--mobile-right-height);
+       padding: 20px 24px;
+       padding-bottom: calc(20px + env(safe-area-inset-bottom));
     }
     .rightTitle{
         font-size: 28px;
