@@ -22,7 +22,7 @@ body
     font-family: "inter", system-ui, sans-serif;
     overflow: hidden;
     position: relative;
-    --mobile-right-height: 140px;
+    --mobile-right-height: 200px;
 }
 
 .loginLeft{
@@ -270,8 +270,8 @@ body
        align-items: center;
        
        height: var(--mobile-right-height);
-       padding: 20px 24px;
-       padding-bottom: calc(20px + env(safe-area-inset-bottom));
+      padding: 20px 24px;
+     
     }
     .rightTitle{
         font-size: 28px;
