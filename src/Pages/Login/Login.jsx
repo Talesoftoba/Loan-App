@@ -3,9 +3,16 @@ import styles from "./Login.module.css";
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import{faGoogle, faFacebookF} from "@fortawesome/free-brands-svg-icons"
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Context/AuthContext';
 
 
   function Login(){
+
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+
     const [formData, setFormData] = useState({
       email:"",
       password:"",
@@ -21,30 +28,48 @@ import{faGoogle, faFacebookF} from "@fortawesome/free-brands-svg-icons"
         [name]: value,
       }));
     }
-    function handleSubmit(e){
-      e.preventDefault();
+    function handleLogin(e) {
+  e.preventDefault();
 
-      if(!formData.email || !formData.password){
-        setError("All fields are required");
-        return;
-      }
-      
-      setError("");
-      setLoading(true);
+  // 1️⃣ Validate inputs FIRST
+  if (!formData.email || !formData.password) {
+    setError("All fields are required");
+    return;
+  }
 
-     
+  if (
+    formData.email !== "user@gmail.com" ||
+    formData.password !== "123456"
+  ) {
+    setError("Invalid email or password");
+    return;
+  }
 
-    setTimeout(()=>{
-      console.log("Login data:", formData);
-      setLoading(false);
-    },1500);
+  // 2️⃣ Clear error and show loading
+  setError("");
+  setLoading(true);
 
-    }
+  // 3️⃣ Simulate API delay
+  setTimeout(() => {
+    const response = {
+      token: "jwt-token",
+      user: {
+        firstName: "Aisha",
+        email: formData.email,
+      },
+    };
+
+    // 4️⃣ NOW login + navigate
+    login(response.user, response.token);
+    setLoading(false);
+    navigate("/dashboard");
+  }, 1500);
+}
 
     return(
          <div className={styles.loginContainer}>
           <div className={styles.loginLeft}>
-            <form className={styles.loginBox} onSubmit={handleSubmit} noValidate>
+            <form className={styles.loginBox} onSubmit={handleLogin} noValidate>
               <div className={styles.logo}> 
                <img src={diamondIcon} alt='sterling bank logo' className={styles.logoImg}/>
                <span className={styles.logoText}> Sterling Bank</span>
