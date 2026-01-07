@@ -114,7 +114,7 @@ import { Link } from 'react-router-dom';
             <button type='submit' className={styles.signIn} disabled={loading}> 
               {loading ? "Signing In..." : "Sign In"} </button>
 
-              <Link to="/signup"> <button type='button' className={styles.signupBtn}>Sign UP</button> </Link>
+              <Link to="/signup"> <button type='button' className={styles.signUp}> Sign Up </button> </Link>
 
               <div className={styles.divider}><span> Or continue with </span></div>
 

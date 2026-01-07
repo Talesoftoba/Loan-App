@@ -237,6 +237,17 @@ body,
     display: flex;
     justify-content: space-between;
 }
+.signUp{
+    color: #0b1f3a;
+    width: 100%;
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid #0b1f3a;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 
 @media (max-width:768px){
@@ -302,6 +313,7 @@ body,
     .socials{
        
         justify-content: center;
+        margin-top: -5px;
     }
     .socialButton{
         width: 100%;
