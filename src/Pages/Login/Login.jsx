@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import{faGoogle, faFacebookF} from "@fortawesome/free-brands-svg-icons"
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
+import {auth} from "../../firebase";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 
   function Login(){
@@ -28,7 +31,7 @@ import { useAuth } from '../../Context/AuthContext';
         [name]: value,
       }));
     }
-    function handleLogin(e) {
+   async function handleLogin(e) {
   e.preventDefault();
 
   // 1️⃣ Validate inputs FIRST
@@ -37,33 +40,35 @@ import { useAuth } from '../../Context/AuthContext';
     return;
   }
 
-  if (
-    formData.email !== "user@gmail.com" ||
-    formData.password !== "123456"
-  ) {
-    setError("Invalid email or password");
-    return;
-  }
-
   // 2️⃣ Clear error and show loading
   setError("");
   setLoading(true);
 
-  // 3️⃣ Simulate API delay
-  setTimeout(() => {
-    const response = {
-      token: "jwt-token",
-      user: {
-        firstName: "Aisha",
-        email: formData.email,
-      },
-    };
+  try {
+    // 3️⃣ Firebase sign in
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      formData.email,
+      formData.password
+    );
 
-    // 4️⃣ NOW login + navigate
-    login(response.user, response.token);
-    setLoading(false);
+    // 4️⃣ Get the user object
+    const user = userCredential.user;
+
+    // 5️⃣ Save user in your context (similar to your mock login)
+    login(
+      { firstName: user.displayName || "User", email: user.email },
+      await user.getIdToken() // JWT token from Firebase
+    );
+
+    // 6️⃣ Navigate to dashboard
     navigate("/dashboard");
-  }, 1500);
+  } catch (err) {
+    console.error(err);
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
 }
 
     return(
@@ -108,6 +113,8 @@ import { useAuth } from '../../Context/AuthContext';
 
             <button type='submit' className={styles.signIn} disabled={loading}> 
               {loading ? "Signing In..." : "Sign In"} </button>
+
+              <Link to="/signup"> <button type='button' className={styles.signupBtn}>Sign UP</button> </Link>
 
               <div className={styles.divider}><span> Or continue with </span></div>
 
