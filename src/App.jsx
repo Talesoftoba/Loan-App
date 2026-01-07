@@ -6,13 +6,6 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp";
 
 function App() {
-
-    function setVh(){
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    window.addEventListener(`resize`,setVh);
-    setVh();
     
       const {user} = useAuth();
    

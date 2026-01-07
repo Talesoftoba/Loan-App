@@ -6,7 +6,7 @@
 }
 
 html,
-body
+body,
 #root{
     height: auto;
     margin: 0;
@@ -17,20 +17,21 @@ body
 .loginContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 0;
-     width: 100vw;
+    min-height: 100dvh;
+     width: 100%;
     font-family: "inter", system-ui, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
-    height: calc(var(--vh, 1vh) * 100);
+    
 }
 
 
 .loginLeft{
-   background-color:  #fff;
+   background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+   
     overflow: hidden;
 }
 
