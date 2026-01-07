@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import styles from "./SignUp.module.css"
 
 function SignUp() {
   const navigate = useNavigate();
@@ -43,29 +44,38 @@ function SignUp() {
   };
 
   return (
-    <form onSubmit={handleSignUp}>
-      <h2>Sign Up</h2>
+    <div className={styles.container}>
+    <form className={styles.signupForm} onSubmit={handleSignUp}>
+      <h2 className={styles.title}>Sign Up</h2>
       <input
+      className={styles.input}
         type="email"
         name="email"
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        required
       />
       <input
+      className={styles.input}
         type="password"
         name="password"
         placeholder="Password"
         value={formData.password}
         onChange={handleChange}
-        required
       />
-      <button type="submit" disabled={loading}>
+      <button 
+       type="submit" 
+       className={styles.submitBtn}
+       disabled={loading}>
         {loading ? "Creating..." : "Sign Up"}
       </button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && (
+      <div className={styles.errorBox}>
+     <span className={styles.errorText}>{error}</span>
+           </div>
+         )}
     </form>
+    </div>
   );
 }
 

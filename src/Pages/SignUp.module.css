@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+     font-family: "inter", system-ui, sans-serif;
+     margin: 0;
+     padding: 0;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+}
+
+.signupForm{
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 48px 34px 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+   
+}
+.title{
+    font-size: 26px;
+    color: #111827;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+    
+.input{
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    background-color: #f9fafb;
+}
+.input:focus{
+    border-color: #0b1f3a;
+    background-color: #ffffff;
+}
+.input::placeholder{
+    color: #9ca3af;
+    font-weight: 400;
+}
+.submitBtn{
+    width: 100%;
+    padding: 14px;
+    background-color: #0b1f3a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.submitBtn:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.errorBox{
+    margin-top: 12px;
+    padding: 12px 14px;
+    background-color: #fef2f2;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+.errorText{
+    font-size: 15px;
+    color: #dc2626;
+}
+@media(max-width: 768px){
+    .signupForm{
+        padding: 32px 20px 36px;
+    }
+    .title{
+        font-size: 24px;
+    }
+
+}
