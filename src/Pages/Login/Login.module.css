@@ -92,8 +92,9 @@ body,
     background-color: #fef2f2;
     border: 1px solid #fecaca;
     border-radius: 8px;
-    padding: 10px 20px;
-    margin-bottom: 16px;
+    padding: 5px 5px;
+    margin-bottom: -10px;
+    margin-top: 10px;
     text-align: center;
 }
 
