@@ -1,9 +1,7 @@
-// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
-// Read config from environment variables
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -14,16 +12,10 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Optional: analytics
-const analytics = getAnalytics(app);
-
-console.log("API KEY:",
-    import.meta.env.VITE_FIREBASE_API_KEY);
-
-
+// Safe analytics initialization
+export const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
 
 // Export auth to use in components
 export const auth = getAuth(app);
