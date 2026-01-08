@@ -1,4 +1,5 @@
 import Sidebar from "../../Components/Sidebar"
+import styles from "./Dashboard.module.css"
 import { useAuth } from "../../Context/AuthContext"
 import { useNavigate } from "react-router-dom"
 
@@ -15,7 +16,7 @@ import { useNavigate } from "react-router-dom"
       }
        return(
              
-               <div className={StyleSheet.dashboardLayout}>
+               <div className={styles.dashboardLayout}>
                  <Sidebar/>
                 <p>welcome, {user.firstName}</p>
                 <button onClick={handleLogout}>Logout</button>

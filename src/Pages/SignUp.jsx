@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,
+  updateProfile
+ } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignUp.module.css"
 
 function SignUp() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ 
+     firstName:"",
+     lastName:"",
+    email: "",
+   password: "", 
+    });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -17,7 +24,8 @@ function SignUp() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    if (!formData.email || !formData.password) {
+    
+    if (!formData.firstName || !formData.email || !formData.password) {
       setError("All fields are required");
       return;
     }
@@ -31,6 +39,11 @@ function SignUp() {
         formData.email,
         formData.password
       );
+      //save first name to firebase
+      await updateProfile(userCredential.user, {
+        displayName:formData.firstName
+      });
+
       console.log("New user created:", userCredential.user);
 
       // Optionally redirect to login page or dashboard
@@ -63,6 +76,23 @@ function SignUp() {
         value={formData.password}
         onChange={handleChange}
       />
+     <div className={styles.nameRow}>
+      <input 
+      type="text"
+      name="firstName"
+      placeholder="First Name"
+      value={formData.firstName}
+      onChange={handleChange}
+      />
+      <input 
+      type="text"
+      name="lastName"
+      placeholder="Last Name"
+      value={formData.lastName}
+      onChange={handleChange}
+      />
+      </div>
+      
       <button 
        type="submit" 
        className={styles.submitBtn}
