@@ -1,0 +1,87 @@
+/* Layout */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+}
+
+/* Text */
+.title {
+  font-size: 14px;
+  color: #374151;
+}
+
+.value {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.meta {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* Trend Colors */
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.neutral {
+  color: #6b7280;
+}
+
+/* Bar Chart */
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  height: 60px;
+  gap: 6px;
+}
+
+.bar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Bar Colors */
+.barPositive {
+  background-color: #16a34a;
+}
+
+.barNegative {
+  background-color: #dc2626;
+}
+
+.barNeutral {
+  background-color: #9ca3af;
+}
+
+/* Line Chart */
+.lineChart {
+  width: 100%;
+  height: 60px;
+}
+
+/* Line Colors */
+.linePositive {
+  color: #16a34a;
+}
+
+.lineNegative {
+  color: #dc2626;
+}
+
+.lineNeutral {
+  color: #9ca3af;
+}

@@ -1,0 +1,86 @@
+.activity {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Timeline Container */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Item */
+.item {
+  display: flex;
+  gap: 16px;
+}
+
+/* Timeline Track */
+.track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Vertical Line */
+.line {
+  width: 2px;
+  flex: 1;
+  background: #e5e7eb;
+  margin-top: 4px;
+}
+
+/* Content */
+.content {
+  display: flex;
+  gap: 12px;
+}
+
+/* Icon Bubble */
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+.title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Colors */
+.blue {
+  background-color: #e6f0ff;
+  color: #2563eb;
+}
+
+.green {
+  background-color: #e7f8ef;
+  color: #16a34a;
+}

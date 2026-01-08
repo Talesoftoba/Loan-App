@@ -1,28 +1,34 @@
-import Sidebar from "../../Components/Sidebar"
+import Sidebar from "../../Components/Sidebar/Sidebar";
+import Header from "../../Components/Header/Header";
+import QuickActions from "../../Components/QuickActions/QuickActions";
+import Summary from "../../Components/Summary/Summary";
+import RecentActivity from "../../Components/RecentActivity/RecentActivity";
 import styles from "./Dashboard.module.css"
-import { useAuth } from "../../Context/AuthContext"
-import { useNavigate } from "react-router-dom"
+
+
 
 
 
   function Dashboard(){
 
-      const {user, logout} = useAuth();
-      const navigate = useNavigate();
+     
+       return (
+    <div className={styles.container}>
+      <Sidebar />
 
-      function handleLogout(){
-        logout();
-        navigate("/login")
-      }
-       return(
-             
-               <div className={styles.dashboardLayout}>
-                 <Sidebar/>
-                <p>welcome, {user.firstName}</p>
-                <button onClick={handleLogout}>Logout</button>
+      <main className={styles.main}>
+        <Header />
 
-               </div>
+        <QuickActions />
 
-       )
+        <div className={styles.bottomGrid}>
+          <Summary />
+          <RecentActivity />
+        </div>
+        
+      </main>
+      
+    </div>
+  );
   }  
      export default Dashboard
