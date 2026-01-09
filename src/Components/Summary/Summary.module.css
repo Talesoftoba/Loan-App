@@ -89,3 +89,15 @@
 .lineNeutral {
   color: #9ca3af;
 }
+
+
+@media (max-width: 768px) {
+  .summary {
+    gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
+

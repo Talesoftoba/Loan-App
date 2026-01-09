@@ -105,3 +105,14 @@
   color: #ffffff;
 }
 
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    overflow: visible;
+     display: none;
+  }
+}
+

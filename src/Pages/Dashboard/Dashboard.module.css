@@ -2,7 +2,9 @@
 .container {
   display: flex;
   min-height: 100vh;
+  height: auto;
   background: #f8f9fc;
+  overflow-y: auto;
 }
 
 .main {
@@ -11,6 +13,7 @@
   overflow-x: hidden;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-y: auto;
 }
 
 .bottomGrid {
@@ -33,6 +36,28 @@
   font-weight: bold;
   color: #111827;
   margin-top: 10px;
-  
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    display: block;
+  }
+
+  .main {
+    padding: 12px;
+    max-width: 100%;
+    overflow-y: visible;
+    min-height: auto;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr; /* stack */
+  }
+  html,
+  body{
+    overflow-y: auto;
+  }
 }
 

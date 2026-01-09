@@ -2,3 +2,17 @@
   box-sizing: border-box;
 }
 
+
+  html,
+  body,
+  #root{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+ 
+
+

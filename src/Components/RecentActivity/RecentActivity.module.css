@@ -83,3 +83,15 @@
   background: #e7f8ef;
   color: #16a34a;
 }
+
+@media (max-width: 768px) {
+  .activity {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .timeline {
+    display: flex;
+  flex-direction: column
+  }
+}
