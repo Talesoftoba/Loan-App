@@ -1,26 +1,68 @@
-.title {
-  margin: 32px 0 16px;
+.wrapper {
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+  margin-top: 25px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 1.2rem;
 }
 
+/* Card */
 .card {
   background: #ffffff;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 270px; /* ⬅️ increased slightly */
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Image container */
+.imageWrapper {
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  padding: 1.25rem;     /* ⬅️ more breathing room */
+  margin-bottom: 1rem;
+
+  height: 190px;        /* ⬅️ main change (bigger image = taller card) */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card h3 {
-  font-size: 16px;
+.imageWrapper img {
+  max-width: 100%;
+  max-height: 110%;     /* ⬅️ allows image to grow a bit */
+  object-fit: contain;
 }
 
-.card p {
+/* Text */
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.desc {
+  font-size: 12px;
   color: #6b7280;
-  font-size: 13px;
-  margin-top: 8px;
+  line-height: 1.4;
 }

@@ -27,8 +27,9 @@
 
 /* Section heading */
 .sectionTitle {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   color: #111827;
+  margin-top: 10px;
 }
 

@@ -31,7 +31,7 @@ const Sidebar = () => {
                <span className={styles.logoText}> Sterling Bank</span>
               </div>
 
-              <nav clasName={styles.mainNav}>
+              <nav className={styles.mainNav}>
 <button className={`${styles.link} ${styles.active}`}>
           <LayoutDashboard size={18} />
           Overview
@@ -79,7 +79,7 @@ const Sidebar = () => {
         </button>
 
  <button className={styles.logoutButton}
- onClick={handleLogout}>Logout</button>   
+ onClick={handleLogout}>LogOut</button>   
   </nav>
   </aside>
   );
