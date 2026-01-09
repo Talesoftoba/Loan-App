@@ -39,9 +39,16 @@ function SignUp() {
         formData.email,
         formData.password
       );
+
+      // 2️⃣ Generate auto avatar URL using DiceBear initials
+      const avatarURL = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+        formData.firstName
+      )}`;
+
       //save first name to firebase
       await updateProfile(userCredential.user, {
-        displayName:formData.firstName
+        displayName:formData.firstName,
+        photoURL:avatarURL,
       });
 
       console.log("New user created:", userCredential.user);

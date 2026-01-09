@@ -57,7 +57,10 @@ import { Link } from 'react-router-dom';
 
     // 5️⃣ Save user in your context (similar to your mock login)
     login(
-      { firstName: user.displayName || "User", email: user.email },
+      { firstName: user.displayName || "User",
+         email: user.email,
+        avatar: user.photoURL || "/default-avatar.png",
+       },
       await user.getIdToken() // JWT token from Firebase
     );
 
