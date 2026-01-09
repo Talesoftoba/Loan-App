@@ -42,12 +42,14 @@ margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .imageWrapper img {
-  max-width: 100%;
-  max-height: 110%;     /* ⬅️ allows image to grow a bit */
-  object-fit: contain;
+   max-width: 1000%;
+   max-height: 500%; 
+  object-fit: cover;
+  
 }
 
 /* Text */
