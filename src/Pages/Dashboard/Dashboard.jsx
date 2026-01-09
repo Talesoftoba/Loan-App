@@ -16,13 +16,18 @@ import styles from "./Dashboard.module.css"
     <div className={styles.container}>
       <Sidebar />
 
-      <main className={styles.main}>
+      <main className={styles.main}> 
         <Header />
 
         <QuickActions />
 
         <div className={styles.bottomGrid}>
+ 
+   <div className={styles.summaryBlock}>    
+    <h2 className={styles.sectionTitle}>Summary</h2>  
           <Summary />
+</div>
+
           <RecentActivity />
         </div>
         

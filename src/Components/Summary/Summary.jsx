@@ -5,7 +5,10 @@ import styles from "./Summary.module.css";
 
 const Summary = () => {
   return (
+    
     <section className={styles.summary}>
+
+      
       <SummaryCard
         title="Loan Applications"
         value={12}
