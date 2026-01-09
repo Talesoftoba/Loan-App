@@ -57,7 +57,12 @@
 }
 .nameRow{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+    width: -5px;
+    align-items: center;
+}
+.nameRow ::placeholder{
+        text-align: center;
 }
 .nameRow input{
     flex: 1;
@@ -91,11 +96,15 @@
     color: #dc2626;
 }
 @media(max-width: 768px){
-    .signupForm{
-        padding: 32px 20px 36px;
-    }
+    
     .title{
         font-size: 24px;
     }
 
+    .nameRow input{
+       min-width: 5px;
+    }
+    .nameRow ::placeholder{
+        text-align: center;
+    }
 }

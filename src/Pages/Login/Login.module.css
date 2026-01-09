@@ -1,11 +1,7 @@
 
-*,
-*::before,
-*::after{
+*{
     box-sizing: border-box;
 }
-
-
 
 .loginContainer{
     display: grid;
@@ -71,15 +67,13 @@
     margin-top: 0;
 }
 .subtitle{
-    font-size: 15px;
+    font-size: 11px;
     color: #6b7280;
    margin-top: -1px;
 }
 .errorText{
     font-size: 14px;
     color: #b91c1c;
-    line-height: 1.4;
-    
 }
 .errorBox{
     background-color: #fef2f2;
@@ -244,6 +238,8 @@
 }
 
 
+
+
 @media (max-width:768px){
     .loginContainer{
         grid-template-columns: 1fr;
@@ -253,31 +249,34 @@
         min-height: auto;
         
     }
+    .inputField{
+        padding: 10px 20px;
+    }
     .loginLeft{
         display: flex;
         justify-content: center;
         align-items: flex-start;
-       padding-bottom: 0;
-       margin-bottom: 0;
+       
     }
     .loginBox{
         transform: translateY(-8px);
         margin-bottom: 30px;
     }
     .loginRight{
-       padding: 24px;
+       visibility: hidden;
        position: fixed;
         bottom: 0;
        left: 0;
        right: 0;
-       height: 185px;
+       height: 150px;
        display: flex;
        justify-content: center;
        align-items: center;
-       padding: 48px 24px;
+       margin-top: 500px;
        text-align: center;
       background-color: #0b1f3a;
        align-self: stretch;
+
     }
     .rightTitle{
         font-size: 28px;
