@@ -2,8 +2,9 @@
 .summary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 60px;
+  gap: 10px;
+  margin-top: 20px;
+    
   
 }
 
@@ -11,6 +12,7 @@
   background: #ffffff;
   padding: 24px;
   border-radius: 14px;
+    border: 1px solid #e5e7eb;
 }
 
 /* Text */

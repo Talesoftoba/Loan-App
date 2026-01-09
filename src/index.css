@@ -1,25 +1,4 @@
-
-html,
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-/* index.css */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+*{
   box-sizing: border-box;
 }
-
-#root {
-  height: 100%;           /* fills viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* center content vertically */
-  align-items: center;     /* center horizontally */
-}
-
-
 
