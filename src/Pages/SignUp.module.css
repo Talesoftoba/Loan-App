@@ -19,7 +19,7 @@
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 48px 34px 40px;
+   padding: 100px 24px;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -58,18 +58,23 @@
 .nameRow{
     display: flex;
     gap: 0.5rem;
-    width: -5px;
     align-items: center;
+    flex-direction: column;
 }
 .nameRow ::placeholder{
         text-align: center;
 }
 .nameRow input{
+      width: 95%;
+    padding: 10px ;
+    border-radius: 8px;
     flex: 1;
+    align-items: center;
+    display: flex;
 }
 .submitBtn{
     width: 100%;
-    padding: 14px;
+   padding: 14px;
     background-color: #0b1f3a;
     color: #ffffff;
     font-size: 15px;
@@ -77,7 +82,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 12px;
+    margin-top: 3rem;
 }
 .submitBtn:disabled{
     opacity: 0.6;
@@ -107,4 +112,9 @@
     .nameRow ::placeholder{
         text-align: center;
     }
+    .signupForm{
+         padding: 100px 24px;
+    }
+
+    
 }

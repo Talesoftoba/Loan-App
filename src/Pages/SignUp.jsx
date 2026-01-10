@@ -67,7 +67,7 @@ function SignUp() {
   return (
     <div className={styles.container}>
     <form className={styles.signupForm} onSubmit={handleSignUp}>
-      <h2 className={styles.title}>Sign Up</h2>
+      <h2 className={styles.title}>Create Account</h2>
       <input
       className={styles.input}
         type="email"
@@ -105,7 +105,7 @@ function SignUp() {
        type="submit" 
        className={styles.submitBtn}
        disabled={loading}>
-        {loading ? "Creating..." : "Sign Up"}
+        {loading ? "Creating..." : "sign up"}
       </button>
       {error && (
       <div className={styles.errorBox}>
