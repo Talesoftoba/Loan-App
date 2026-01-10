@@ -5,15 +5,8 @@ import Summary from "../../Components/Summary/Summary";
 import RecentActivity from "../../Components/RecentActivity/RecentActivity";
 import styles from "./Dashboard.module.css"
 
-
-
-
-
   function Dashboard(){
 
-
-  
-     
        return (
     <div className={styles.container}>
       <Sidebar />
@@ -38,4 +31,6 @@ import styles from "./Dashboard.module.css"
     </div>
   );
   }  
-     export default Dashboard
+     export default Dashboard;
+     
+  

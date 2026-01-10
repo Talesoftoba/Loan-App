@@ -94,7 +94,7 @@
     font-size: 14px;
     border-radius: 8px;
     border: 1px solid #d1d5bd;
-    margin-bottom: 16px;
+    margin-bottom: 1px;
     outline: none;
 }
 .inputField:focus{
@@ -253,9 +253,10 @@
         padding: 10px 20px;
     }
     .loginLeft{
-        display: flex;
-        justify-content: center;
+       
         align-items: flex-start;
+        flex: 1;
+        
        
     }
     .loginBox{
@@ -263,7 +264,6 @@
         margin-bottom: 30px;
     }
     .loginRight{
-       visibility: hidden;
        position: fixed;
         bottom: 0;
        left: 0;
@@ -274,13 +274,14 @@
        align-items: center;
        margin-top: 500px;
        text-align: center;
-      background-color: #0b1f3a;
        align-self: stretch;
+       opacity: 0.2;
 
     }
     .rightTitle{
         font-size: 28px;
         text-align: center;
+       
         
     }
     .rightText{
@@ -289,6 +290,7 @@
         text-align: center;
         margin: 0 auto;
         line-height: 1.2;
+       
     }
    .processWord{
     margin-top: -5px;
@@ -306,7 +308,7 @@
     .socials{
        
         justify-content: center;
-        margin-top: -5px;
+        margin-bottom: -50px;
     }
     .socialButton{
         width: 100%;

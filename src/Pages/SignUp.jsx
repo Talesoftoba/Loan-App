@@ -42,7 +42,7 @@ function SignUp() {
       );
 
       // 2️⃣ Generate auto avatar URL using DiceBear initials
-      const avatarURL = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+ const avatarURL = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
         formData.firstName
       )}`;
 
