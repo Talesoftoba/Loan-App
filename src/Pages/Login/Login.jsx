@@ -8,6 +8,7 @@ import { useAuth } from '../../Context/AuthContext';
 import {auth} from "../../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import PasswordInput from '../../Components/PasswordInput/PasswordInput';
 
 
   function Login(){
@@ -102,7 +103,7 @@ import { Link } from 'react-router-dom';
               required
               />
 
-               <input 
+               <PasswordInput
               type='password'
               name='password'
               placeholder='Password'

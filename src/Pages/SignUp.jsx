@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword,
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignUp.module.css"
+import PasswordInput from '../Components/PasswordInput/PasswordInput';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -75,7 +76,7 @@ function SignUp() {
         value={formData.email}
         onChange={handleChange}
       />
-      <input
+      <PasswordInput
       className={styles.input}
         type="password"
         name="password"
