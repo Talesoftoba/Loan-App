@@ -84,6 +84,7 @@ function SignUp() {
         value={formData.password}
         onChange={handleChange}
       />
+
      <div className={styles.nameRow}>
       <input 
       type="text"

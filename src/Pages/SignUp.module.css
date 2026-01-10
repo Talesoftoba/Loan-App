@@ -38,15 +38,18 @@
 }
     
 .input{
-    width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 16px;
+     width: 100%;
+    padding: 14px;
     font-size: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5bd;
+    margin-bottom: 1px;
     outline: none;
-    background-color: #f9fafb;
 }
+.input:first-of-type{
+    margin-top: 24px;
+}
+
 .input:focus{
     border-color: #0b1f3a;
     background-color: #ffffff;
@@ -55,11 +58,17 @@
     color: #9ca3af;
     font-weight: 400;
 }
+.signupEye{
+    top: 50%;
+    margin: 500px;
+}
+   
 .nameRow{
     display: flex;
     gap: 0.5rem;
     align-items: center;
     flex-direction: column;
+    margin-top: 11px;
 }
 .nameRow ::placeholder{
         text-align: center;
