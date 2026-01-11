@@ -20,15 +20,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
     overflow: hidden;
 }
 
 .loginBox{
-    width: 380px;
+   width: 380px;
     display: flex; 
     flex-direction: column;
-}
+
+     
+} 
 .loginBox *,
 .loginBox *::before,
 .loginBox *::after{
@@ -246,6 +247,7 @@
    
     .loginContainer{
         grid-template-columns: 1fr;
+         background-color: #f3f4f6;
     }
      .loginLeft{
         align-items: center;
@@ -257,6 +259,15 @@
     }
     .loginBox{
         padding: 0 24px;
+    }
+    .loginBox{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 30px 24px;
+    
     }
 
 
